@@ -61,7 +61,7 @@ const config: SiteConfig = {
       "We're making a few improvements behind the scenes. GattuAI is evolving — smarter, faster, and more polished. We'll be back before you know it.",
     primaryCTA: {
       text: 'Get in Touch',
-      href: 'mailto:contact@gattuai.io',               // REPLACE: your real email
+      href: 'mailto:charolashlok@gmail.com',               // REPLACE: your real email
     },
     secondaryCTA: {
       text: 'Visit Our Blog',
@@ -70,8 +70,8 @@ const config: SiteConfig = {
   },
 
   contact: {
-    email: 'contact@gattuai.io',                        // REPLACE: your real email
-    phone: null,                                         // REPLACE: e.g. "+91 98765 43210"
+    email: 'charolashlok@gmail.com',                        // REPLACE: your real email
+    phone: "+919904791688",                                         // REPLACE: e.g. "+91 98765 43210"
     socials: [
       // REPLACE: Add your actual social links. Remove any you don't use.
       // { label: 'Twitter / X', href: 'https://x.com/gattuai', icon: 'twitter' },
