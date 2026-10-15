@@ -6,7 +6,7 @@
 # Install dependencies
 npm install
 
-# Run locally (http://localhost:5173)
+# Run locally (http://localhost:3000)
 npm run dev
 
 # Build for production
