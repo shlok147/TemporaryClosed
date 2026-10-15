@@ -1,0 +1,21 @@
+.spotlight {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  --spot-x: 50vw;
+  --spot-y: 50vh;
+  background: radial-gradient(
+    350px circle at var(--spot-x) var(--spot-y),
+    rgba(124, 58, 237, 0.06) 0%,
+    transparent 100%
+  );
+}
+
+@media (max-width: 768px) {
+  .spotlight { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spotlight { display: none; }
+}

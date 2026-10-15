@@ -1,0 +1,106 @@
+.section {
+  position: relative;
+  z-index: 1;
+  padding: 0 32px 80px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(124, 58, 237, 0.25) 30%,
+    rgba(6, 182, 212, 0.25) 70%,
+    transparent 100%
+  );
+  margin-bottom: 56px;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  opacity: 0;
+  animation: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) 1.6s forwards;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 28px 32px;
+  min-width: 200px;
+  flex: 1;
+  border-radius: 16px;
+  background: rgba(13, 15, 31, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card:hover {
+  background: rgba(13, 15, 31, 0.8);
+  border-color: rgba(124, 58, 237, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(124, 58, 237, 0.1);
+}
+
+.cardIcon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(124, 58, 237, 0.08);
+  color: #9f6ef5;
+  transition: background 0.3s ease;
+}
+
+.card:hover .cardIcon {
+  background: rgba(124, 58, 237, 0.15);
+}
+
+.cardLabel {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #64748b;
+}
+
+.cardValue {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  color: #94a3b8;
+  transition: color 0.3s ease;
+  word-break: break-all;
+}
+
+.card:hover .cardValue {
+  color: #f1f5f9;
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 640px) {
+  .section { padding: 0 16px 60px; }
+  .grid { flex-direction: column; }
+  .card { min-width: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .grid { animation: none; opacity: 1; }
+  .card { transition: none; }
+}

@@ -1,0 +1,32 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pieceWrap {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.piece {
+  display: inline-block;
+  transform: translateY(110%);
+  opacity: 0;
+  transition:
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.visible .piece {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .piece {
+    transform: none;
+    opacity: 1;
+    transition: none;
+  }
+}
